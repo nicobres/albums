@@ -8,12 +8,12 @@
     android:background="?android:attr/selectableItemBackground"
     android:clickable="true"
     android:focusable="true"
-    android:padding="20dp">
+    android:padding="@dimen/medium_spacing">
 
     <ImageView
         android:id="@+id/album_thumbnail"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/album_thumbnail_size"
+        android:layout_height="@dimen/album_thumbnail_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -24,7 +24,7 @@
         android:id="@+id/album_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="@dimen/medium_spacing"
         app:layout_constrainedWidth="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
