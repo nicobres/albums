@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerView
             .apply {
                 layoutManager = LinearLayoutManager(context)
-                adapter = AlbumsAdapter(emptyList())
+                adapter = AlbumsAdapter()
                 addItemDecoration(DividerItemDecoration(context, VERTICAL))
             }
 
@@ -73,8 +73,7 @@ class MainActivity : AppCompatActivity() {
         binding.swipeRefresh.isRefreshing = false
         binding.retryButton.visibility = View.GONE
         (binding.recyclerView.adapter as AlbumsAdapter).apply {
-            this.albums = albums
-            this.notifyDataSetChanged()
+            this.submitList(albums)
         }
     }
 }
