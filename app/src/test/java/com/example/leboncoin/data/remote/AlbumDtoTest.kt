@@ -1,7 +1,7 @@
 package com.example.leboncoin.data.remote
 
 import com.example.leboncoin.data.Album
-import com.google.gson.GsonBuilder
+import com.squareup.moshi.Moshi
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import java.io.BufferedReader
@@ -12,16 +12,18 @@ class AlbumDtoTest {
     @Test
     fun readJsonAlbumDtoTest() {
         // Arrange
-        val gson = GsonBuilder().create()
+        val moshi = Moshi.Builder().build()
+        val adapter = moshi.adapter(Album::class.java)
 
         val json  = readFile("album.json")
 
         // Act
-        val album: Album = gson.fromJson(json, Album::class.java)
+        val album: Album? = adapter.fromJson(json)
+
         // Assert
-        assertEquals(1, album.id)
-        assertEquals("accusamus beatae ad facilis cum similique qui sunt", album.title)
-        assertEquals("https://via.placeholder.com/150/92c952", album.thumbnailUrl)
+        assertEquals(1, album?.id)
+        assertEquals("accusamus beatae ad facilis cum similique qui sunt", album?.title)
+        assertEquals("https://via.placeholder.com/150/92c952", album?.thumbnailUrl)
     }
 
 

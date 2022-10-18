@@ -7,9 +7,9 @@ import com.example.leboncoin.data.remote.AlbumDto
 object AlbumDataMapper {
 
     fun convertDtoToModel(albumDto: AlbumDto) = Album(
-        albumDto.id ?: -1,
-        albumDto.title ?: "",
-        albumDto.thumbnailUrl ?: ""
+        albumDto.id,
+        albumDto.title,
+        albumDto.thumbnailUrl
     )
 
     fun convertModelToEntity(album: Album) = AlbumEntity(
