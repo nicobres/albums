@@ -1,7 +1,7 @@
 package com.example.leboncoin.data.repository
 
 import com.example.leboncoin.data.Album
-import com.example.leboncoin.utils.RequestResult
+import com.example.utils.RequestResult
 
 interface AlbumRepository {
     suspend fun getRemoteAlbums(): RequestResult<List<Album>>

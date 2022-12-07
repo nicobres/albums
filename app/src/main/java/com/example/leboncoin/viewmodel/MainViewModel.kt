@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.leboncoin.data.Album
 import com.example.leboncoin.usecase.FetchAlbumUseCase
-import com.example.leboncoin.utils.RequestResult
+import com.example.utils.RequestResult
 import kotlinx.coroutines.launch
 import org.koin.core.component.KoinComponent
 

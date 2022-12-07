@@ -10,11 +10,11 @@ internal class AlbumDataMapperTest {
     @Test
     fun testConvertDtoToModel() {
         // Arrange
-        val albumDto = AlbumDto().apply {
-            id = 1
-            title = "Mauvais ordre"
+        val albumDto = AlbumDto(
+            id = 1,
+            title = "Mauvais ordre",
             thumbnailUrl = "https://thumbnail"
-        }
+        )
 
         // Act
         val res = AlbumDataMapper.convertDtoToModel(albumDto)

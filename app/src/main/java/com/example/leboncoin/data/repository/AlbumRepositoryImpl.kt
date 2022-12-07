@@ -4,7 +4,7 @@ import com.example.leboncoin.data.Album
 import com.example.leboncoin.data.AlbumDataMapper
 import com.example.leboncoin.data.local.AppDatabase
 import com.example.leboncoin.data.remote.ApiAdapter
-import com.example.leboncoin.utils.RequestResult
+import com.example.utils.RequestResult
 
 
 class AlbumRepositoryImpl(

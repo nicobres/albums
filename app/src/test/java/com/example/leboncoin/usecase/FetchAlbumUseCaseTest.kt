@@ -2,9 +2,8 @@ package com.example.leboncoin.usecase
 
 import com.example.leboncoin.data.Album
 import com.example.leboncoin.data.repository.AlbumRepository
-import com.example.leboncoin.usecase.FetchAlbumUseCase
 import com.example.leboncoin.utils.NetworkHelper
-import com.example.leboncoin.utils.RequestResult
+import com.example.utils.RequestResult
 import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk

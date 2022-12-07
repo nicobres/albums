@@ -11,8 +11,8 @@ import com.example.leboncoin.AlbumsAdapter
 import com.example.leboncoin.R
 import com.example.leboncoin.data.Album
 import com.example.leboncoin.databinding.ActivityMainBinding
-import com.example.leboncoin.utils.RequestResult
 import com.example.leboncoin.viewmodel.MainViewModel
+import com.example.utils.RequestResult
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {

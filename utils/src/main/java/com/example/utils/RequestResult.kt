@@ -1,4 +1,4 @@
-package com.example.leboncoin.utils
+package com.example.utils
 
 sealed class RequestResult<out T> {
     data class Success<out T>(

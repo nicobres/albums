@@ -7,7 +7,7 @@ import com.example.leboncoin.data.local.AppDatabase
 import com.example.leboncoin.data.remote.AlbumDto
 import com.example.leboncoin.data.remote.ApiAdapter
 import com.example.leboncoin.data.remote.ApiClient
-import com.example.leboncoin.utils.RequestResult
+import com.example.utils.RequestResult
 import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk
@@ -58,11 +58,11 @@ class AlbumRepositoryImplTest {
     fun getRemoteAlbums_Success_Success() = runTest {
         // Arrange
         val albums = listOf(
-            AlbumDto().apply {
-                id = 1
-                title = "title"
+            AlbumDto(
+                id = 1,
+                title = "title",
                 thumbnailUrl = "thumb"
-            }
+            )
         )
         val response = mockk<Response<List<AlbumDto>>>()
         every { response.isSuccessful } returns true
